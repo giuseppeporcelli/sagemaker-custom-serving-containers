@@ -22,5 +22,9 @@ class HandlerService(DefaultHandlerService):
             code_dir = context.system_properties.get("model_dir") + '/code'
             sys.path.append(code_dir)
             self._initialized = True
+        
+        # Printing system properties for debugging purposes.
+        print('Context system properties: ')
+        print(context.system_properties)
 
         super().initialize(context)
