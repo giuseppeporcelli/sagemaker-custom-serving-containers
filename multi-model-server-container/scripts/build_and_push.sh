@@ -2,7 +2,7 @@ ACCOUNT_ID=$1
 REGION=$2
 REPO_NAME=$3
 
-cd ../package/ && python setup.py sdist && cp dist/multi_model_serving-1.0.0.tar.gz ../docker/code/
+cd ../package/ && python setup.py sdist && cp dist/multi_model_serving-1.0.0.tar.gz docker/code/
 
 docker build -f ../docker/Dockerfile -t $REPO_NAME ../docker
 
